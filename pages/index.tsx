@@ -14,18 +14,23 @@ const ProfilePage = () => {
 				</Head>
 				<div className='p-4'>
 					<h1 className='text-4xl font-bold'>
-						Hello, It&apos;s Me <br /> <p className="text-6xl">Naomi Kleinhans</p> And
-						I&apos;m a Frontend Developer
+						Hello, It&apos;s Me <br />{' '}
+						<p className='text-6xl'>Naomi Kleinhans</p> And I&apos;m a Frontend
+						Developer
 					</h1>
 					<p className='mt-4'>
-						I&apos;m Naomi Kleinhans, a passionate front-end developer based in
-						South Africa. I love creating interactive and user-friendly web
-						experiences that make a difference. My journey in web development
-						started when...
+						I&apos;m a dedicated front-end web developer
+						specializing in turning ideas into functional, user-friendly
+						websites. With expertise in HTML, CSS, and JavaScript, I focus on
+						the technical implementation of web projects. My commitment to
+						clean, responsive code, innovative problem-solving, and a love for
+						the latest web technologies drives me to create web solutions that
+						perform flawlessly. I thrive in collaborative environments and am
+						always eager to take on new challenges.
 					</p>
 				</div>
 			</div>
-			
+
 			<div className='flex-shrink-0'>
 				<button
 					type='button'
