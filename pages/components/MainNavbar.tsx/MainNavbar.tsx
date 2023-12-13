@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, PlusIcon } from '../SvgIcons/SvgIcons'
+import Image from 'next/image'
 
 const user = {
 	name: 'Tom Cook',
@@ -21,11 +22,11 @@ export default function Example() {
 	return (
 		<Disclosure
 			as='nav'
-			className='bg-gray-800'
+			className='bg-Navbar'
 		>
 			{({ open }) => (
 				<>
-					<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+					<div className='max-w-7xl px-4 sm:px-6 lg:px-8'>
 						<div className='flex h-28 justify-between items-center'>
 							<div className='flex items-center'>
 								<div className='-ml-2 mr-2 flex items-center md:hidden'>
@@ -45,11 +46,12 @@ export default function Example() {
 										)}
 									</Disclosure.Button>
 								</div>
-								<div className='flex justify-start items-center'>
-									<img
-										className='h-8 w-auto'
-										src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
-										alt='Your Company'
+								<div className=''>
+									<Image
+							src='/logo3.png'
+										alt='Logo'
+										width={100}
+										height={100}
 									/>
 								</div>
 							</div>

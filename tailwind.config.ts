@@ -16,5 +16,10 @@ const config: Config = {
     },
   },
   plugins: [],
+  themes: [{
+    colors: {
+      Navbar: '#333333'
+    }
+  }]
 }
 export default config
