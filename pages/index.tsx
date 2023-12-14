@@ -1,7 +1,8 @@
-import MainNavbar from "./components/MainNavbar.tsx/MainNavbar"
+
 import React from 'react'
 import { PlusIcon } from "./components/SvgIcons/SvgIcons"
 import Head from "next/head"
+import MainNavbar from './components/MainNavbar'
 
 
 const ProfilePage = () => {
