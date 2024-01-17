@@ -35,9 +35,9 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		screens: {
-			mobile: { max: '500px' },
-			laptop: { min: '501px', max: '1400px' },
-			desktop: { min: '1401px' }
+			sm: { max: '500px' },
+			md: { min: '501px', max: '1400px' },
+			lg: { min: '1401px' }
 		},
 		boxShadow: {
 			menu: '0px 0px 5px 0px rgba(0,0,0,0.03)',
@@ -65,8 +65,9 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				themeColorMain: '#D6F379',
-				themeColorSecondary: '#E5E5E5',
+				themeColorMain: '#5A75CE',
+				themeColorSecondary: '#CEB35A',
+				textColor: '#EBE0BC',
 				menuDashboard: '#1F6AF6',
 				menuProfile: '#5F40B0',
 				menuLessons: '#F29848',
@@ -110,7 +111,6 @@ module.exports = {
 				meritSpecial: '#DCA70C',
 				bursariesFaculty: '#309549',
 				menuBursary: '#add844',
-				textColor: '#fff',
 				textColorSecondary: '#000000',
 				appBg: '#121212',
 				compBg: '#181818',
