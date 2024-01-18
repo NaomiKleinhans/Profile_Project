@@ -9,8 +9,8 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { JSX,SVGProps } from 'react'
-import { WebDevIcon } from '@/components/SvgIcons/WebDevIcon'
-import Image from 'next/image'
+import MainNav from '@/components/ui/MainNav'
+import MobileMainNav from '@/components/ui/MobileMainNav'
 
 const Home = () => {
 	return (
@@ -18,46 +18,12 @@ const Home = () => {
 			key='1'
 			className='flex flex-col min-h-screen'
 		>
-			<header className='fixed w-full px-4 lg:px-6 h-24 flex justify-between bg-[#000] text-textColor'>
-				<Link
-					className='flex items-center justify-start'
-					href='#'
-				>
-					<Image
-						src='/logo.png'
-						alt='Logo Image'
-						width='300'
-						height='300'
-					/>
-					<span className='sr-only'>Frontend Developer</span>
-				</Link>
-				<nav className='ml-auto flex items-center gap-4 sm:gap-6 justify-end'>
-					<Link
-						className='text-2xl font-medium hover:underline underline-offset-4'
-						href='#'
-					>
-						Home
-					</Link>
-					<Link
-						className='text-2xl font-medium hover:underline underline-offset-4'
-						href='#'
-					>
-						Projects
-					</Link>
-					<Link
-						className='text-2xl font-medium hover:underline underline-offset-4'
-						href='#'
-					>
-						About
-					</Link>
-					<Link
-						className='text-2xl font-medium hover:underline underline-offset-4'
-						href='#'
-					>
-						Contact
-					</Link>
-				</nav>
-			</header>
+			<div className='sm:hidden'>
+				<MainNav />
+			</div>
+			<div className='md:hidden lg:hidden'>
+				<MobileMainNav />
+			</div>
 			<main className='flex-1'>
 				<section className='w-full pt-12 md:pt-24 lg:pt-32 bg-[#181818]'>
 					<div className='px-4 md:px-6 space-y-10 xl:space-y-16'>
