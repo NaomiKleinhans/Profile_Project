@@ -45,8 +45,8 @@ module.exports = {
 			inner: 'inset 0px 3px 4px 0px rgba(0, 0, 0, 0.06)'
 		},
 		fontFamily: {
-			display: ['Helvetica'],
-			body: ['Helvetica', 'Open Sans']
+			display: ['Gugi regular'],
+			body: ['Open Sans']
 		},
 		fontSize: {
 			xxs: '.5rem',
