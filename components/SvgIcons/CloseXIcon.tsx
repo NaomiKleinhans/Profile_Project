@@ -1,4 +1,4 @@
-export const HamburgerIcon = (props: any) => {
+export const CloseXIcon = (props: any) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -7,19 +7,19 @@ export const HamburgerIcon = (props: any) => {
 		>
 			<defs>
 				<style>
-					{'.hbi-1 {fill: #fff; stroke: #EBE0BC; strokeWidth: 1.5;  }'}
+					{'.ci-1 {fill: #fff; stroke: #EBE0BC; strokeWidth: 1.5;  }'}
 				</style>
 			</defs>
 			<g
-				id='hamburger-menu'
-				data-name='hamburger menu'
+				id='close-menu'
+				data-name='close menu'
 			>
 				<g>
 					<path
-						className='hbi-1'
+						className='ci-1'
 						strokeLinecap='round'
 						strokeLinejoin='round'
-						d='M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5'
+						d='M6.35 6.35l11.31 11.31m0-11.31L6.35 17.66'
 					/>
 				</g>
 			</g>

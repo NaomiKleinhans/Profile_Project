@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { HamburgerIcon } from '../SvgIcons/HamburgerIcon'
+import MobileMainNavLinks from './MobileMainNavLinks'
+import { CloseXIcon } from '../SvgIcons/CloseXIcon'
 
 const MobileMainNav = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false)
@@ -12,7 +14,7 @@ const MobileMainNav = () => {
 
 	return (
 		<>
-			<header className='fixed md:hidden lg:hidden w-full px-4 h-24 bg-[#000] text-textColor'>
+			<header className='fixed md:hidden lg:hidden w-full px-4 h-14 bg-[#000] text-textColor'>
 				<div className='flex items-center justify-between'>
 					<Link
 						className='p-2'
@@ -32,39 +34,12 @@ const MobileMainNav = () => {
 						onClick={toggleMenu}
 						aria-label='Toggle Menu'
 					>
-						<div className='w-12 h-12'>
-							<HamburgerIcon />
+						<div className='w-10 h-10'>
+							{isMenuOpen ? <CloseXIcon /> : <HamburgerIcon />}
 						</div>
 					</button>
 				</div>
-				{isMenuOpen && (
-					<nav className='fixed p-4 right-0 flex flex-col rounded-lg bg-[#121212]'>
-						<Link
-							className='text-2xl font-medium hover:underline underline-offset-4 p-2'
-							href='#'
-						>
-							Home
-						</Link>
-						<Link
-							className='text-2xl font-medium hover:underline underline-offset-4 p-2'
-							href='#'
-						>
-							Projects
-						</Link>
-						<Link
-							className='text-2xl font-medium hover:underline underline-offset-4 p-2'
-							href='#'
-						>
-							About
-						</Link>
-						<Link
-							className='text-2xl font-medium hover:underline underline-offset-4 p-2'
-							href='#'
-						>
-							Contact
-						</Link>
-					</nav>
-				)}
+				{isMenuOpen && <MobileMainNavLinks />}
 			</header>
 		</>
 	)
