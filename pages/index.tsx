@@ -98,7 +98,7 @@ const Home = () => {
 								</h2>
 							</div>
 						</div>
-						<div className='mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 text-black'>
+						<div className='grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 text-black'>
 							<Card>
 								<CardHeader>
 									<CardTitle className='text-black'>Project 1</CardTitle>
