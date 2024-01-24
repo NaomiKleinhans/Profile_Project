@@ -35,9 +35,12 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		screens: {
-			sm: { max: '500px' },
-			md: { min: '501px', max: '1400px' },
-			lg: { min: '1401px' }
+			// sm: { max: '800px' },
+			// md: { min: '801px', max: '1400px' },
+			// lg: { min: '1401px' }
+			sm: { max: '800px' },
+			md: { min: '801px', max: '1200px' },
+			lg: { min: '1201px' }
 		},
 		boxShadow: {
 			menu: '0px 0px 5px 0px rgba(0,0,0,0.03)',
