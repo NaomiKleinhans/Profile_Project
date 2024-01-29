@@ -7,12 +7,12 @@ export const ChevronLeftIcon = (props: any) => {
 		>
 			<defs>
 				<style>
-					{'.cli-1 {fill: #fff; stroke: #EBE0BC; strokeWidth: 1.5;  }'}
+					{'.cli-1 {fill: #fff; stroke: #EBE0BC }'}
 				</style>
 			</defs>
 			<g
-				id='close-menu'
-				data-name='close menu'
+				id='chevron-left'
+				data-name='chevron left'
 			>
 				<g>
 					<path

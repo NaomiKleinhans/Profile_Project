@@ -107,10 +107,10 @@ const Home = () => {
 			</div>
 
 			<main>
-				<div className='relative'>
+				<div className='relative no-scrolly'>
 					{canScrollLeft && (
 						<button
-							className='text-themeColorMain absolute left-0 top-0 cursor-pointer'
+							className='text-themeColorMain fixed left-0 top-0 cursor-pointer'
 							onClick={() => handleScrollButtonClick('left')}
 						>
 							<ChevronLeftIcon />
@@ -118,7 +118,7 @@ const Home = () => {
 					)}
 					{canScrollRight && (
 						<button
-							className='text-themeColorMain absolute right-0 top-0 cursor-pointer'
+							className='text-themeColor fixed right-0 top-0 cursor-pointer'
 							onClick={() => handleScrollButtonClick('right')}
 						>
 							<ChevronRightIcon />

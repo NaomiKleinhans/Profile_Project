@@ -11,8 +11,8 @@ export const ChevronRightIcon = (props: any) => {
 				</style>
 			</defs>
 			<g
-				id='close-menu'
-				data-name='close menu'
+				id='chevron-right'
+				data-name='chevron right'
 			>
 				<g>
 					<path
