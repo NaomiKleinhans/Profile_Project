@@ -6,9 +6,7 @@ export const ChevronRightIcon = (props: any) => {
 			{...props}
 		>
 			<defs>
-				<style>
-					{'.cri-1 {fill: #fff; stroke: #EBE0BC; strokeWidth: 1.5;  }'}
-				</style>
+				<style>{'.cri-1 {fill: none; stroke: #5A75CE  }'}</style>
 			</defs>
 			<g
 				id='chevron-right'
@@ -19,7 +17,7 @@ export const ChevronRightIcon = (props: any) => {
 						className='cri-1'
 						strokeLinecap='round'
 						strokeLinejoin='round'
-						d='m8.25 4.5 7.5 7.5-7.5 7.5'
+						d='m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5'
 					/>
 				</g>
 			</g>
