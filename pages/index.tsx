@@ -130,7 +130,7 @@ const Home = () => {
 				>
 					<section className='min-w-full space-y-10 bg-[#181818]'>
 						<h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
-							Welcome to my portfolio
+							Welcome to my Portfolio
 						</h1>
 						<div className='text-center text-textColor lg:text-xl md:text-lg sm:text-sm mx-4'>
 							<p>
@@ -142,13 +142,12 @@ const Home = () => {
 								together.
 							</p>
 						</div>
-						<div className='sm:hidden mt-10'>
+						<div className='sm:hidden'>
 							<div
 								style={{
 									display: 'flex',
 									justifyContent: 'center',
-									alignItems: 'center',
-									height: '30vh'
+									alignItems: 'center'
 								}}
 							>
 								<div
@@ -193,7 +192,10 @@ const Home = () => {
 							</div>
 						</div>
 					</section>
-					<section className='min-w-full flex justify-center bg-[#181818]'>
+					<section
+						className='min-w-full flex justify-center bg-[#181818]'
+						id='featured-projects'
+					>
 						<div className='container mt-24 px-4 md:px-6'>
 							<div className='flex flex-col items-center justify-center space-y-4 text-center'>
 								<div className='space-y-2'>
