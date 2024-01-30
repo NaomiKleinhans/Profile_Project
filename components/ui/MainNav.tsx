@@ -1,9 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image'
+import Link from 'next/link'
 
 const MainNav = () => {
 	return (
-		<header className='fixed w-full px-4 lg:px-6 h-24 flex justify-between space-x-4 bg-[#000] text-textColor'>
+		<header className='fixed w-full px-4 lg:px-6 h-20 flex justify-between space-x-4 bg-[#000] text-textColor'>
 			<Link
 				className='flex items-center justify-start'
 				href='#'
@@ -12,18 +12,8 @@ const MainNav = () => {
 					<Image
 						src='/logo.png'
 						alt='Logo Image'
-						width='300'
-						height='300'
-						className='md:hidden'
-					/>
-				</div>
-				<div>
-					<Image
-						src='/logo.png'
-						alt='Logo Image'
 						width='250'
 						height='250'
-						className='lg:hidden'
 					/>
 				</div>
 

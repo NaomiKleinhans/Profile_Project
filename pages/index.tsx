@@ -125,10 +125,10 @@ const Home = () => {
 				)}
 
 				<div
-					className='carousel-container overflow-x-scroll flex '
+					className='carousel-container overflow-x-scroll h-content flex '
 					ref={containerRef}
 				>
-					<section className='min-w-full h-screen md:space-y-20 sm:space-y-10 lg:space-y-28 bg-[#181818]'>
+					<section className='min-w-full space-y-10 bg-[#181818]'>
 						<h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
 							Welcome to my portfolio
 						</h1>
@@ -142,7 +142,7 @@ const Home = () => {
 								together.
 							</p>
 						</div>
-						<div className='sm:hidden mt-20'>
+						<div className='sm:hidden mt-10'>
 							<div
 								style={{
 									display: 'flex',
@@ -161,8 +161,8 @@ const Home = () => {
 									<Image
 										src='/profile-pic.png'
 										alt='Profile Picture'
-										width='300'
-										height='300'
+										width='250'
+										height='250'
 									/>
 								</div>
 							</div>
@@ -193,7 +193,7 @@ const Home = () => {
 							</div>
 						</div>
 					</section>
-					<section className='min-w-full h-screen flex justify-center bg-[#181818]'>
+					<section className='min-w-full flex justify-center bg-[#181818]'>
 						<div className='container mt-24 px-4 md:px-6'>
 							<div className='flex flex-col items-center justify-center space-y-4 text-center'>
 								<div className='space-y-2'>
@@ -236,7 +236,7 @@ const Home = () => {
 							</div>
 						</div>
 					</section>
-					<section className='min-w-full h-screen flex justify-center bg-[#181818]'>
+					<section className='min-w-full flex justify-center bg-[#181818]'>
 						<div className='container mt-24 px-4 md:px-6'>
 							<div className='flex flex-col items-center justify-center space-y-4 text-center'>
 								<div className='space-y-2'>
@@ -285,7 +285,7 @@ const Home = () => {
 				</div>
 				{/* </div> */}
 			</main>
-			<footer className='flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t'>
+			<footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t'>
 				<p className='text-xs text-gray-500 dark:text-gray-400'>
 					© 2024 Frontend Developer. All rights reserved.
 				</p>
