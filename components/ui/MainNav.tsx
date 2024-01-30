@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
-
+import { SetStateAction, useState } from 'react'
+type Section = 'home' | 'projects' | 'about' | 'contact'
 const MainNav = () => {
-	const [projectsClicked, setProjectsClicked] = useState(false)
+ const [activeSection, setActiveSection] = useState<Section | null>(null)
 
-	const handleProjectsClick = () => {
-		setProjectsClicked(true)
-	}
+ const handleSectionClick = (section: Section) => {
+		setActiveSection(section)
+ }
 
 	return (
 		<header className='fixed w-full px-4 lg:px-6 h-20 flex justify-between space-x-4 bg-[#000] text-textColor'>
@@ -28,29 +28,38 @@ const MainNav = () => {
 			</Link>
 			<nav className='ml-auto flex items-center gap-4 sm:gap-6 justify-end'>
 				<Link
-					className='text-xl font-medium hover:underline underline-offset-4'
+					className={`text-xl font-medium ${
+						activeSection === 'home' ? 'underline' : ''
+					} underline-offset-4`}
 					href='#'
+					onClick={() => handleSectionClick('home')}
 				>
 					Home
 				</Link>
 				<Link
 					className={`text-xl font-medium ${
-						projectsClicked ? 'underline' : ''
+						activeSection === 'projects' ? 'underline' : ''
 					} underline-offset-4`}
 					href='#featured-projects'
-					onClick={handleProjectsClick}
+					onClick={() => handleSectionClick('projects')}
 				>
 					Projects
 				</Link>
 				<Link
-					className='text-xl font-medium hover:underline underline-offset-4'
-					href='#'
+					className={`text-xl font-medium ${
+						activeSection === 'about' ? 'underline' : ''
+					} underline-offset-4`}
+					href='#about'
+					onClick={() => handleSectionClick('about')}
 				>
 					About
 				</Link>
 				<Link
-					className='text-xl font-medium hover:underline underline-offset-4'
-					href='#'
+					className={`text-xl font-medium ${
+						activeSection === 'contact' ? 'underline' : ''
+					} underline-offset-4`}
+					href='#contact'
+					onClick={() => handleSectionClick('contact')}
 				>
 					Contact
 				</Link>
