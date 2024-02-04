@@ -13,7 +13,8 @@ const MainNav = () => {
 		<header className='fixed w-full px-4 lg:px-6 h-20 flex justify-between space-x-4 bg-[#000] text-textColor'>
 			<Link
 				className='flex items-center justify-start'
-				href='#'
+				href='#home'
+				onClick={() => handleSectionClick('home')}
 			>
 				<div>
 					<Image
@@ -27,7 +28,7 @@ const MainNav = () => {
 				<span className='sr-only'>Frontend Developer</span>
 			</Link>
 			<nav className='ml-auto flex items-center gap-4 sm:gap-6 justify-end'>
-				<Link
+				{/* <Link
 					className={`text-xl font-medium ${
 						activeSection === 'home' ? 'underline' : ''
 					} underline-offset-4`}
@@ -35,7 +36,7 @@ const MainNav = () => {
 					onClick={() => handleSectionClick('home')}
 				>
 					Home
-				</Link>
+				</Link> */}
 				<Link
 					className={`text-xl font-medium ${
 						activeSection === 'projects' ? 'underline' : ''

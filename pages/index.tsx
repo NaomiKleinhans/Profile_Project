@@ -1,16 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { CardTitle, CardHeader, CardContent, Card } from '@/components/ui/card'
-import { Label } from '@/components/ui/label'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
+
 import MainNav from '@/components/ui/MainNav'
 import MobileMainNav from '@/components/ui/MobileMainNav'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { ChevronRightIcon } from '@/components/SvgIcons/ChevronRightIcon'
 import { ChevronLeftIcon } from '@/components/SvgIcons/ChevronLeftIcon'
+import Contact from '@/components/ui/Contact'
+import Project from '@/components/ui/Project'
+import About from '@/components/ui/About'
 
 const Home = () => {
 	const [canScrollLeft, setCanScrollLeft] = useState(false)
@@ -130,7 +129,7 @@ const Home = () => {
 				>
 					<section
 						className='min-w-full space-y-10 bg-[#181818]'
-						id='about'
+						id='home'
 					>
 						<h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
 							Welcome to my Portfolio
@@ -199,105 +198,28 @@ const Home = () => {
 						className='min-w-full flex justify-center bg-[#181818]'
 						id='featured-projects'
 					>
-						<div className='container mt-24 px-4 md:px-6'>
-							<div className='flex flex-col items-center justify-center space-y-4 text-center'>
-								<div className='space-y-2'>
-									<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold mb-24 text-themeColorMain'>
-										Featured Projects
-									</h2>
-								</div>
-							</div>
-							<div className='grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 text-black'>
-								<Card>
-									<CardHeader>
-										<CardTitle className='text-black'>Project 1</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<p className='text-sm text-black'>
-											A description of the first project.
-										</p>
-									</CardContent>
-								</Card>
-								<Card>
-									<CardHeader>
-										<CardTitle>Project 2</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<p className='text-sm'>
-											A description of the second project.
-										</p>
-									</CardContent>
-								</Card>
-								<Card>
-									<CardHeader>
-										<CardTitle>Project 3</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<p className='text-sm'>
-											A description of the third project.
-										</p>
-									</CardContent>
-								</Card>
-							</div>
-						</div>
+						<Project />
+					</section>
+					<section
+						className='min-w-full flex justify-center bg-[#181818]'
+						id='about'
+					>
+						<About />
 					</section>
 					<section
 						className='min-w-full flex justify-center bg-[#181818]'
 						id='contact'
 					>
-						<div className='container mt-24 px-4 md:px-6'>
-							<div className='flex flex-col items-center justify-center space-y-4 text-center'>
-								<div className='space-y-2'>
-									<h2 className='lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold mb-24 text-themeColorMain'>
-										Contact Me
-									</h2>
-								</div>
-							</div>
-							<div className='space-y-4 text-textColor'>
-								<div className='grid grid-cols-2 gap-4 '>
-									<div className='space-y-2'>
-										<Label htmlFor='first-name'>First name</Label>
-										<Input
-											id='first-name'
-											placeholder='Enter your first name'
-										/>
-									</div>
-									<div className='space-y-2'>
-										<Label htmlFor='last-name'>Last name</Label>
-										<Input
-											id='last-name'
-											placeholder='Enter your last name'
-										/>
-									</div>
-								</div>
-								<div className='space-y-2'>
-									<Label htmlFor='email'>Email</Label>
-									<Input
-										id='email'
-										placeholder='Enter your email'
-										type='email'
-									/>
-								</div>
-								<div className='space-y-2'>
-									<Label htmlFor='message'>Message</Label>
-									<Textarea
-										className='min-h-[100px]'
-										id='message'
-										placeholder='Enter your message'
-									/>
-								</div>
-								<Button>Send message</Button>
-							</div>
-						</div>
+						<Contact />
 					</section>
 				</div>
 				{/* </div> */}
 			</main>
-			<footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t'>
-				<p className='text-xs text-gray-500 dark:text-gray-400'>
+			<footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t lg:py-2 md:py-2 sm:py-0'>
+				<p className='text-xs text-themeColorMain'>
 					© 2024 Frontend Developer. All rights reserved.
 				</p>
-				<nav className='sm:ml-auto flex gap-4 sm:gap-6'>
+				<nav className='sm:ml-auto flex gap-4 sm:gap-6 text-textColor'>
 					<Link
 						className='text-xs hover:underline underline-offset-4'
 						href='#'
