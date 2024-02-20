@@ -194,7 +194,7 @@ const Home = () => {
 								Explore my{' '}
 								<a
 									href='#projects'
-									className='button bg-themeColorMain px-2 py-1 text-black font-semibold rounded-md mx-2'
+									className='button border-themeColorMain border-2 text-themeColorMain px-2 py-1 font-semibold rounded-md mx-2'
 								>
 									Projects
 								</a>{' '}
