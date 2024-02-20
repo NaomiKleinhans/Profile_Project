@@ -134,14 +134,10 @@ const Home = () => {
 						<h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
 							Welcome to my Portfolio
 						</h1>
-						<div className='text-center text-textColor lg:text-xl md:text-lg sm:text-sm mx-4'>
+						<div className='text-center text-textColor lg:text-2xl md:text-xl sm:text-md mx-4'>
 							<p>
 								I am a frontend developer with a passion for creating beautiful
 								and functional web applications.
-							</p>
-							<p>
-								Explore my projects and get in touch if you would like to work
-								together.
 							</p>
 						</div>
 						<div className='sm:hidden'>
@@ -193,6 +189,18 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
+						<div className='text-center text-textColor lg:text-lg md:text-md sm:text-xs mx-4'>
+							<p className='sm:mt-10 md:mt-20 lg:mt-20'>
+								Explore my{' '}
+								<a
+									href='#projects'
+									className='button bg-themeColorMain px-2 py-1 text-black font-semibold rounded-md mx-2'
+								>
+									Projects
+								</a>{' '}
+								and get in touch if you would like to work together.
+							</p>
+						</div>
 					</section>
 					<section
 						className='min-w-full flex justify-center bg-[#181818]'
@@ -215,19 +223,19 @@ const Home = () => {
 				</div>
 				{/* </div> */}
 			</main>
-			<footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t lg:py-2 md:py-2 sm:py-0'>
-				<p className='text-xs text-themeColorMain'>
+			<footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t lg:py-4 md:py-4 sm:py-4'>
+				<p className='sm:text-xxs md:text-sm lg:text-sm text-themeColorMain'>
 					© 2024 Frontend Developer. All rights reserved.
 				</p>
 				<nav className='sm:ml-auto flex gap-4 sm:gap-6 text-textColor'>
 					<Link
-						className='text-xs hover:underline underline-offset-4'
+						className='sm:text-xxs md:text-sm lg:text-sm hover:underline underline-offset-4'
 						href='#'
 					>
 						Terms of Service
 					</Link>
 					<Link
-						className='text-xs hover:underline underline-offset-4'
+						className='sm:text-xxs md:text-sm lg:text-sm hover:underline underline-offset-4'
 						href='#'
 					>
 						Privacy
