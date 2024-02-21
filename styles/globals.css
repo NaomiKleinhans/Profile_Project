@@ -74,7 +74,7 @@ a {
 }
 @media screen and (min-width: 0px) and (max-width: 400px) {
 	.h-content {
-		height: 96vh;
+		height: 97vh;
 		/* padding-bottom: 10vh; */
 	}
 }
