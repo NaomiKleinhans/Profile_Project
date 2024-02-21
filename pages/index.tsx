@@ -95,155 +95,156 @@ const Home = () => {
 	}
 	return (
 		<div
-			key='1'
-			className='flex flex-col bg-[#181818]'
-		>
-			<div className='sm:hidden z-50'>
-				<MainNav />
-			</div>
-			<div className='md:hidden lg:hidden z-50'>
-				<MobileMainNav />
-			</div>
-
-			<main>
-				{canScrollLeft ? (
-					<div className='w-10 h-10 absolute top-1/2 z-50 cursor-pointer scroll-left animate-pulse'>
-						<ChevronLeftIcon onClick={() => handleScrollButtonClick('left')} />
-					</div>
-				) : (
-					<></>
-				)}
-				{canScrollRight ? (
-					<div className='w-10 h-10 absolute top-1/2 right-0 z-50 cursor-pointer animate-pulse'>
-						<ChevronRightIcon
-							onClick={() => handleScrollButtonClick('right')}
-						/>
-					</div>
-				) : (
-					<></>
-				)}
-
-				<div
-					className='carousel-container overflow-x-scroll h-content flex '
-					ref={containerRef}
-				>
-					<section
-						className='min-w-full space-y-10 bg-[#181818]'
-						id='home'
-					>
-						<h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
-							Welcome to my Portfolio
-						</h1>
-						<div className='text-center text-textColor lg:text-2xl md:text-xl sm:text-md mx-4'>
-							<p>
-								I am a frontend developer with a passion for creating beautiful
-								and functional web applications.
-							</p>
-						</div>
-						<div className='sm:hidden'>
-							<div
-								style={{
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center'
-								}}
-							>
-								<div
-									style={{
-										border: '6px solid #5A75CE',
-										borderRadius: '50%',
-										overflow: 'hidden'
-									}}
-								>
-									<Image
-										src='/profile-pic.png'
-										alt='Profile Picture'
-										width='250'
-										height='250'
-									/>
-								</div>
-							</div>
-						</div>
-						<div className='lg:hidden md:hidden mt-16'>
-							<div
-								style={{
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-									height: '30vh'
-								}}
-							>
-								<div
-									style={{
-										border: '6px solid #5A75CE',
-										borderRadius: '50%',
-										overflow: 'hidden'
-									}}
-								>
-									<Image
-										src='/profile-pic.png'
-										alt='Profile Picture'
-										width='150'
-										height='150'
-									/>
-								</div>
-							</div>
-						</div>
-						<div className='text-center text-textColor lg:text-lg md:text-md sm:text-xs mx-4'>
-							<p className='sm:mt-10 md:mt-20 lg:mt-20'>
-								Explore my{' '}
-								<a
-									href='#projects'
-									className='button border-themeColorMain border-2 text-themeColorMain px-2 py-1 font-semibold rounded-md mx-2'
-								>
-									Projects
-								</a>{' '}
-								and get in touch if you would like to work together.
-							</p>
-						</div>
-					</section>
-					<section
-						className='min-w-full flex justify-center bg-[#181818]'
-						id='featured-projects'
-					>
-						<Project />
-					</section>
-					<section
-						className='min-w-full flex justify-center bg-[#181818]'
-						id='about'
-					>
-						<About />
-					</section>
-					<section
-						className='min-w-full flex justify-center bg-[#181818]'
-						id='contact'
-					>
-						<Contact />
-					</section>
+				key='1'
+				className='flex flex-col bg-[#181818] overflow-y-hidden no-scrolly'
+			>
+				<div className='sm:hidden z-50'>
+					<MainNav />
 				</div>
-				{/* </div> */}
-			</main>
-			<footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t lg:py-4 md:py-4 sm:py-4'>
-				<p className='sm:text-xxs md:text-sm lg:text-sm text-themeColorMain'>
-					© 2024 Frontend Developer. All rights reserved.
-				</p>
-				<nav className='sm:ml-auto flex gap-4 sm:gap-6 text-textColor'>
-					<Link
-						className='sm:text-xxs md:text-sm lg:text-sm hover:underline underline-offset-4'
-						href='#'
+				<div className='md:hidden lg:hidden z-50'>
+					<MobileMainNav />
+				</div>
+
+				<main>
+					{canScrollLeft ? (
+						<div className='w-10 h-10 absolute top-1/2 z-50 cursor-pointer scroll-left animate-pulse'>
+							<ChevronLeftIcon
+								onClick={() => handleScrollButtonClick('left')}
+							/>
+						</div>
+					) : (
+						<></>
+					)}
+					{canScrollRight ? (
+						<div className='w-10 h-10 absolute top-1/2 right-0 z-50 cursor-pointer animate-pulse'>
+							<ChevronRightIcon
+								onClick={() => handleScrollButtonClick('right')}
+							/>
+						</div>
+					) : (
+						<></>
+					)}
+
+					<div
+						className='carousel-container overflow-x-scroll h-content flex no-scrolly'
+						ref={containerRef}
 					>
-						Terms of Service
-					</Link>
-					<Link
-						className='sm:text-xxs md:text-sm lg:text-sm hover:underline underline-offset-4'
-						href='#'
-					>
-						Privacy
-					</Link>
-				</nav>
-			</footer>
-		</div>
-	)
+						<section
+							className='min-w-full lg:space-y-10 md:space-y-10 sm:space-y-10 bg-[#181818]'
+							id='home'
+						>
+							<h1 className='mt-24 sm:mb-8 lg:text-5xl md:text-4xl text-center mx-4 sm:text-3xl font-bold text-themeColorMain'>
+								Welcome to my Portfolio
+							</h1>
+							<div className='text-center text-textColor lg:text-2xl md:text-xl sm:text-md mx-4'>
+								<p>
+									I am a frontend developer with a passion for creating
+									beautiful and functional web applications.
+								</p>
+							</div>
+							<div className='sm:hidden'>
+								<div
+									style={{
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center'
+									}}
+								>
+									<div
+										style={{
+											border: '6px solid #5A75CE',
+											borderRadius: '50%',
+											overflow: 'hidden'
+										}}
+									>
+										<Image
+											src='/profile-pic.png'
+											alt='Profile Picture'
+											width='250'
+											height='250'
+										/>
+									</div>
+								</div>
+							</div>
+							<div className='lg:hidden md:hidden mt-16'>
+								<div
+									style={{
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center',
+										height: '30vh'
+									}}
+								>
+									<div
+										style={{
+											border: '6px solid #5A75CE',
+											borderRadius: '50%',
+											overflow: 'hidden'
+										}}
+									>
+										<Image
+											src='/profile-pic.png'
+											alt='Profile Picture'
+											width='200'
+											height='200'
+										/>
+									</div>
+								</div>
+							</div>
+							<div className='text-center text-textColor lg:text-lg md:text-md sm:text-xs'>
+								
+									Explore my{' '}
+									<a
+										href='#featured-projects'
+										className='button border-themeColorMain border-2 text-themeColorMain px-2 py-1 font-semibold rounded-md mx-2'
+									>
+										Projects
+									</a>{' '}
+							
+							</div>
+						</section>
+						<section
+							className='min-w-full flex justify-center bg-[#181818]'
+							id='featured-projects'
+						>
+							<Project />
+						</section>
+						<section
+							className='min-w-full flex justify-center bg-[#181818]'
+							id='about'
+						>
+							<About />
+						</section>
+						<section
+							className='min-w-full flex justify-center bg-[#181818]'
+							id='contact'
+						>
+							<Contact />
+						</section>
+					</div>
+					{/* </div> */}
+				</main>
+				<footer className='flex flex-col sm:flex-row w-full shrink-0 items-center px-4 md:px-6 border-t border-themeColorMain sm:py-2 py-1.5 bg-[#181818]'>
+					<p className='sm:text-xxs md:text-sm lg:text-sm text-textColor'>
+						© 2024 Frontend Developer. All rights reserved.
+					</p>
+					<nav className='sm:ml-auto flex gap-4 sm:gap-6 text-textColor'>
+						<Link
+							className='sm:text-xxs md:text-sm lg:text-sm hover:underline underline-offset-4'
+							href='#'
+						>
+							Terms of Service
+						</Link>
+						<Link
+							className='sm:text-xxs md:text-sm lg:text-sm hover:underline underline-offset-4'
+							href='#'
+						>
+							Privacy
+						</Link>
+					</nav>
+				</footer>
+			</div>
+		)
 }
 
 export default Home
