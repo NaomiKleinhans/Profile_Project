@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
-import { Label } from './Label'
-import { Input } from './Input'
-import { Textarea } from './Textarea'
-import { Button } from './Button'
+import { Label } from './label'
+import { Input } from './input'
+import { Textarea } from './textarea'
+import { Button } from './button'
 
 const Contact = () => {
 	const containerRef = useRef<HTMLDivElement>(null)
